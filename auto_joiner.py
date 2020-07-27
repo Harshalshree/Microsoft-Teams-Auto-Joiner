@@ -2,6 +2,7 @@ import json
 import random
 import re
 import time
+import datetime
 from threading import Timer
 
 from selenium import webdriver
@@ -23,11 +24,21 @@ def load_config():
     with open('config.json') as json_data_file:
         config = json.load(json_data_file)
 
+def wait_until_found(sel, timeout):
+    try:
+        element_present = EC.visibility_of_element_located((By.CSS_SELECTOR, sel))
+        WebDriverWait(browser, timeout).until(element_present)
+
+        return browser.find_element_by_css_selector(sel)
+    except exceptions.TimeoutException:
+        print("Timeout waiting for element.")
+        return None
+
 def main():
     global browser, config
 
     load_config()
-    
+
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--ignore-ssl-errors')
@@ -36,6 +47,61 @@ def main():
     browser = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
     browser.get("https://teams.microsoft.com")
+
+    if config['email'] != "" and config['password'] != "":
+        print('Email and Password found in config.json!')
+
+        login_email = wait_until_found("input[type='email']", 30)
+        if login_email is not None:
+            login_email.send_keys(config['email'])
+            time.sleep(1)
+
+        # find the element again to avoid StaleElementReferenceException
+        login_email = wait_until_found("input[type='email']", 5)
+        if login_email is not None:
+            login_email.send_keys(Keys.ENTER)
+
+        login_pwd = wait_until_found("input[type='password']", 5)
+        if login_pwd is not None:
+            login_pwd.send_keys(config['password'])
+            time.sleep(1)
+
+        # find the element again to avoid StaleElementReferenceException
+        login_pwd = wait_until_found("input[type='password']", 5)
+        if login_pwd is not None:
+            login_pwd.send_keys(Keys.ENTER)
+        
+        # stay signed in
+        keep_logged_in = wait_until_found("input[id='idBtn_Back']", 5)
+        if keep_logged_in is not None:
+            keep_logged_in.click()
+        
+        # use web app instead
+        use_web_instead = wait_until_found("a.use-app-lnk", 5)
+        if use_web_instead is not None:
+            use_web_instead.click()
+
+        # make sure to have list mode configuration in ms teams
+        print("Waiting for correct page...")
+        team_name = config['classname']
+        print(team_name)
+        team_css_selector = "div[data-tid='team-{}-li']".format(team_name)
+        
+        teams_page = wait_until_found(team_css_selector, 60 * 5)
+        if teams_page is not None:
+            print('DEBUG : Clicked Team Name')
+            teams_page.click()
+
+        now = datetime.datetime.now()
+        hr = now.hour
+        print(hr)
+
+        wait = 0
+
+            
+        
+
+        
 
 
 if __name__ == "__main__":

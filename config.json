@@ -1,23 +1,7 @@
 {
-    "email": "",
-    "password": "",
-    "start_automatically": false,
-    "random_delay": false,
+    "email": "example@example.com",
+    "password": "example",
     "auto_leave_after_min": -1,
-    "organisation_num" : 1,
-    "headless" : false ,
-    "blacklist": [
-      {
-        "team_name": "Example Team 1",
-        "channel_names": [
-          "First Channel to blacklist in this team",
-          "Second Channel to blacklist"
-        ]
-      },
-       {
-        "team_name": "Blacklist whole team",
-        "channel_names": [
-        ]
-      }
-    ]
+    "classname": "Test",
+    "class_hour": 9
   }
