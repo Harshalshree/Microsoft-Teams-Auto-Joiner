@@ -12,8 +12,11 @@
 - [Configuration options](#configuration-options)
 - [Run the script](#run-the-script)  
 
+
 Python script to automatically join Microsoft Teams meetings.  
+
 Automatically turns off your microphone and camera before joining.
+
 Specify your team name and time. That's it!
 
 
