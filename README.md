@@ -37,8 +37,8 @@ If set to a value greater than zero, the bot leaves every meeting after the spec
 
 ## Run the script  
   
- 2. Edit the "config.json" file specify your configurations
+ 2. Edit the "config.json" file to specify your configurations.
  3. Install dependencies:   ```pip install -r requirements.txt``` 
  4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py`  
- 5. After starting, teams might be in Grid view, if this is the case change the view to list    
+ 5. After starting, teams might be in Grid view, if this is the case change the view to list.   
 <img src="https://i.imgur.com/GODoJYf.png?2" width="300" height="245" />
