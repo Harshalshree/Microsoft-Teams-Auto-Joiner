@@ -1,7 +1,7 @@
 {
     "email": "example@example.com",
     "password": "example",
-    "auto_leave_after_min": -1,
-    "classname": "Test",
-    "class_hour": 9
+    "auto_leave_after_min": 1, 
+    "teamname": "TEAM_NAME",
+    "meetingtime": "10:00"
   }
