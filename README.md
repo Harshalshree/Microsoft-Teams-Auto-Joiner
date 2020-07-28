@@ -1,4 +1,4 @@
-# Microsoft-Teams-Auto-Joiner (Work In Progress)
+# Microsoft-Teams-Auto-Joiner
 
 ### This is a modified version of an existing repo.
 ### Original Repo by [Tobias Panker](https://GitHub.com/TobiasPankner) : [Link](https://GitHub.com/TobiasPankner/Teams-Auto-Joiner)
@@ -26,13 +26,19 @@ Specify your team name and time. That's it!
    
 ## Configuration options  
   
+Open the config.json file and add your configurations.
+
 - **email/password:**  
 The email/password of your Microsoft account (can be left empty if you don't want to automatically login)
 
 - **auto_leave_after_min:**  
-If set to a value greater than zero, the bot leaves every meeting after the specified time (in minutes). Useful if you know the length of your meeting, if this is left a the default the bot will stay in the meeting until a new one is available.
+If set to a value greater than zero, the bot leaves the meeting after the specified time (in minutes).
 
-- To be completed ...
+- **teamname:** 
+Set the team name of the meeting you want to join here. Case Sensitive Alert!
+
+- **meetingtime:**
+Set the time at which you want to join the meeting. 24 hours clock. Example: "17:30".
 
 
 ## Run the script  
