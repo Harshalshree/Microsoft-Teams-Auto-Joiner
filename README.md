@@ -4,7 +4,7 @@
 ### Original Repo by [Tobias Panker](https://GitHub.com/TobiasPankner) : [Link](https://GitHub.com/TobiasPankner/Teams-Auto-Joiner)
 
 ### What's New In This Repo?
-- The original repository automatically joined a new meeting and ended the existing one. In this version, you can schedule which meeting to join, when to join and when to exit.
+- In this version, you can schedule which meeting to join, when to join and when to exit.
 
 
 ### Documentation
