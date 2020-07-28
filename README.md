@@ -34,10 +34,10 @@ The email/password of your Microsoft account (can be left empty if you don't wan
 - **auto_leave_after_min:**  
 If set to a value greater than zero, the bot leaves the meeting after the specified time (in minutes).
 
-- **teamname:** 
+- **teamname:**<br/>
 Set the team name of the meeting you want to join here. Case Sensitive Alert!
 
-- **meetingtime:**
+- **meetingtime:**<br/>
 Set the time at which you want to join the meeting. 24 hours clock. Example: "17:30".
 
 
