@@ -44,6 +44,6 @@ Set the time at which you want to join the meeting. 24 hours clock. Example: "17
 ## Run the script  
  1. Before starting, teams might be in Grid view, if this is the case change the view to list. 
  <img src="https://i.imgur.com/GODoJYf.png?2" width="300" height="245" />
- 2. Edit the "config.json" file to specify your configurations.
- 3. Install dependencies:   ```pip install -r requirements.txt``` 
- 4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py`    
+ 2. Edit the "config.json" file to specify your configurations.<br/>
+ 3. Install dependencies:   ```pip install -r requirements.txt``` <br/>
+ 4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py` <br/>
