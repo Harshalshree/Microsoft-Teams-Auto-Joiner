@@ -1,7 +1,7 @@
 # Microsoft-Teams-Auto-Joiner
 
 ### This is a modified version of an existing repo.
-### Original Repo by [Tobias Panker](https://GitHub.com/TobiasPankner) : [Link](https://GitHub.com/TobiasPankner/Teams-Auto-Joiner)
+### Original Repo by [Tobias Pankner](https://GitHub.com/TobiasPankner) : [Link](https://GitHub.com/TobiasPankner/Teams-Auto-Joiner)
 
 ### What's New In This Repo?
 - In this version, you can schedule which meeting to join, when to join and when to exit.
