@@ -47,3 +47,6 @@ Set the time at which you want to join the meeting. 24 hours clock. Example: "17
  3. Install dependencies:   ```pip install -r requirements.txt``` 
  4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py`
  <img src="https://i.imgur.com/GODoJYf.png?2" width="300" height="245" />
+ 
+ ##Additional Note
+ The script will not join a meeting with no participants. So make sure to have some of your friends in the meeting while testing it out.
